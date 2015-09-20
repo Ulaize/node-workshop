@@ -15,7 +15,7 @@ var trial = [];
 
 function game (){
      
-    if (!compareWords(decomposedAnimal,answer)){
+    if (decomposedAnimal.join("") !== answer.join("")){
         prompt.start();
                     
         console.log("The word has " + decomposedAnimal.length + " characters.");
@@ -77,17 +77,6 @@ function game (){
 game(decomposedAnimal);
 
 
-function compareWords (array1,array2){
-    
-    for (var i=0 ; i<array1.length ; i++){
-        if (array1[i] !== array2[i]){
-            return false;
-        }
-
-    }
-    
-    return true;
-}
 
 function checkAnswer (a){
     for (var i=0 ; i < decomposedAnimal.length ; i++){
@@ -110,6 +99,5 @@ var f = "|        /|/   \n";
 var g = "|        /     \n";
 var h = "|        / /   \n";
 var i = "|              \n";
-
 
    
